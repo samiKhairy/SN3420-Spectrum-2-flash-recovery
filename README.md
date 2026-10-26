@@ -10,6 +10,13 @@ Recovered one SN3420 that had been written off as dead for four years. All 60 po
 > redistributed here. The firmware you need is already on your switch, or free to download
 > from NVIDIA's own public GitHub. See [Getting the firmware](#4-get-the-correct-firmware-image).
 
+**Starting from a bare switch?** Read
+**[docs/installing-sonic.md](docs/installing-sonic.md)** first — identifying your platform on
+the SONiC supported-devices table, getting the right image, and installing it from ONIE with
+your laptop as the server (tftpd64 for DHCP, `python -m http.server` for the file). The
+recovery below needs `flint` and `mlxfwmanager`, which ship inside the SONiC image, so the OS
+goes on first.
+
 ---
 
 ## Does this apply to you?
@@ -282,6 +289,7 @@ restore paths, including the device-data restore.
 | Path | What |
 |---|---|
 | [`README.md`](README.md) | This guide |
+| [`docs/installing-sonic.md`](docs/installing-sonic.md) | **Start here on a bare switch** — find your platform, get the image, install from ONIE with a laptop as the server |
 | [`docs/diagnosis.md`](docs/diagnosis.md) | Full diagnostic walkthrough with evidence and mstflint source references |
 | [`docs/backup-restore.md`](docs/backup-restore.md) | Backup procedure and four restore cases |
 | [`tools/mk_fwpart.py`](tools/mk_fwpart.py) | Lists an `.mfa` archive and extracts the firmware region for one PSID |
