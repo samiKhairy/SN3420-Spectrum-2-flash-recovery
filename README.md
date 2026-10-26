@@ -311,6 +311,18 @@ Both tools are plain Python 3, no dependencies, and run on the switch itself.
 - Nothing here is endorsed by or affiliated with NVIDIA. You are writing to your own
   hardware's flash at your own risk.
 
+## How this was produced
+
+Research and documentation were done with assistance from Claude (Anthropic), including
+reading the mstflint sources and working out the undocumented `.mfa` archive layout.
+
+**Every command here was executed on a physical SN3420 by a human operator, and every result
+shown is real console output** — including the flash dumps, the failures along the way, and
+the final `FW image verification succeeded`. Nothing in the recovery procedure is untested
+theory. The one exception is the device-data restore (Case C in
+[docs/backup-restore.md](docs/backup-restore.md)), which never occurred and is explicitly
+labelled untested.
+
 ## Credits
 
 Diagnosis worked out by reading the open-source
