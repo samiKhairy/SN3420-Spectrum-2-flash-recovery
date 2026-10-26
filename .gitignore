@@ -1,0 +1,22 @@
+# Never publish: session transcripts, private notes
+chat-backup/
+*.jsonl
+
+# Never publish: NVIDIA firmware binaries or copyrighted manuals.
+# The repo documents how to obtain these from NVIDIA; it does not redistribute them.
+*.bin
+*.mfa
+*.pdf
+nvidia-docs/
+
+# Private copies containing real serial numbers / MAC addresses
+PRIVATE*
+*-private.*
+
+# Lab photos
+*.jpg
+*.jpeg
+*.png
+
+__pycache__/
+*.pyc
